@@ -1,0 +1,25 @@
+apply plugin: "java"
+apply plugin: "eclipse"
+apply plugin: "idea"
+
+repositories {
+    mavenCentral()
+    jcenter()
+}
+
+dependencies {
+    testCompile "junit:junit:4.12"
+    testCompile("org.assertj:assertj-core:3.11.1")
+    testCompile "org.mockito:mockito-core:2.+"
+    compile group: 'net.dongliu', name: 'requests', version: '5.0.3'
+    compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.9.4'
+    
+}
+
+test {
+    testLogging {
+        exceptionFormat = 'full'
+        events = ["passed", "failed", "skipped"]
+    }
+}
+
