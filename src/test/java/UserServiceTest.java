@@ -20,7 +20,7 @@ public class UserServiceTest {
     }
 
     @Test
-    public void testMocking(){
+    public void testGreeting(){
         assertThat(objectToTest.greeting()).endsWith( "Hello, World!");
     }
 
